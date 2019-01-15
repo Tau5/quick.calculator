@@ -1,2 +1,113 @@
-# quick.calculator
+# Quick.Calculator
+
 Calculadora de JavaScript simple para simplificar tus tareas.
+
+## Instalación
+
+```
+npm install quick.calculator --save
+```
+
+## Ejemplos de Uso
+
+```js
+var app = require("quick.calculator");
+//Esto mostrará en la consola el resultado de la suma entre 1 y 10
+var suma = app.sumar(1, 2, 3, 4, 5);
+console.log(suma);
+//Salida: 15
+```
+
+```js
+var app = require("quick.calculator");
+//Esto mostrará en la consola el resultado de la resta entre 1 y 10
+var resta = app.restar(1, 10);
+console.log(resta);
+//Salida: -9
+```
+
+```js
+var app = require("quick.calculator");
+//Esto mostrará en la consola el resultado de la división entre 50 y 10
+var division = app.dividir(50, 10);
+console.log(division);
+//Salida: 5
+```
+
+```js
+var app = require("quick.calculator");
+//Esto mostrará en la consola el resultado de la multiplicación entre 10 y 5
+var multiplicacion = app.multiplicar(10, 5);
+console.log(multiplicacion);
+//Salida: 50
+```
+
+```js
+var app = require("quick.calculator");
+//Esto mostrará en la consola un resultado aleatorio entre 1 y 10
+var random = app.randomize(10, 1);
+console.log(random);
+//Salida: Resultado Aleatorio
+```
+
+```js
+var app = require("quick.calculator");
+//Esto mostrará en la consola el resultado de los valores ingresados
+//En este caso X es el valor numérico a ser evaluado
+//En este caso Y es el porcentaje con el cual el valor X será evaluado
+var X = 500;
+var y = 15;
+var porcentaje = app.porcentuar(X, Y);
+console.log(porcentaje);
+//Salida: 3%
+```
+
+```js
+//Esto verifica si el valor ingresado es un número, si lo es, retornara 'true'
+var app = require("quick.calculator");
+app.verificar(2a1));              // true
+app.verificar(-1.1);              // true
+app.verificar('2a1'));            // true
+app.verificar('-1.1');            // true
+app.verificar(parseInt('08'));    // true
+app.verificar(parseFloat('08'));  // true
+//Esto puedes usarlo de la siguiente manera
+if (app.verificar(1) === true) {
+    console.log("Eso si es un número");
+} else {
+    console.log("Eso no es un número");
+};
+```
+
+```js
+//Esto verifica si el valor ingresado es un número, si no lo es, retornara 'false'
+app.verificar(null);              // false
+app.verificar('');                // false
+app.verificar('hi');              // false
+app.verificar([0]);               // false
+app.verificar(function () {});    // false
+//Esto puedes usarlo de la siguiente manera
+if (app.verificar(Infinity) === false) {
+console.log("Eso no es un número");
+} else {
+    console.log("Eso si es un número");
+};
+```
+
+## Changelog
+
+### v1.0.6
+
+* \+ Agregado: `verificar` La capacidad de verificar si un valor es numérico.
+
+### v1.0.4
+
+* \+ Arreglado: `randomize` Errores de valores aleatorios solucionados.
+
+### v1.0.3
+
+* \+ Agregado: Sumar varios valores.
+
+### V1.0.1
+
+* Primer Lanzamiento.
