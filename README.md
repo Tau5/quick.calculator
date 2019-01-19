@@ -59,7 +59,7 @@ var X = 500;
 var y = 15;
 var porcentaje = app.porcentuar(X, Y);
 console.log(porcentaje);
-//Salida: 3%
+//Salida: 75
 ```
 
 ```js
@@ -94,20 +94,34 @@ console.log("Eso no es un número");
 };
 ```
 
+
+```js
+var app = require("quick.calculator");
+//Esto mostrará en la consola el valor del número ingresado
+var redondeo = app.round(16.5);
+console.log(redondeo);
+//Salida: 17
+```
+
+```js
+var app = require("quick.calculator");
+//Esto mostrará en la consola el valor del número ingresado
+var redondeo = app.round(16.4);
+console.log(redondeo);
+//Salida: 16
+```
+
 ## Changelog
 
-### v1.0.6
+### V0.0.3
 
-* \+ Agregado: `verificar` La capacidad de verificar si un valor es numérico.
+* \+ Agregado: Redondeo de valores con decimal.
+* \+ Agregado: Licencia ISC agregada correctamente.
 
-### v1.0.4
+### V0.0.2
 
-* \+ Arreglado: `randomize` Errores de valores aleatorios solucionados.
+* \+\- Arreglado: Sistema de porcentaje ha sido arreglado correctamente.
 
-### v1.0.3
-
-* \+ Agregado: Sumar varios valores.
-
-### V1.0.1
+### V0.0.1
 
 * Primer Lanzamiento.

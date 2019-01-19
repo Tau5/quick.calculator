@@ -44,9 +44,11 @@ porcentuar: function(a, b) {
     if (b <= 0) throw new Error("Debes ingresar un valor del 1 al 100 para realizar la operación.")
     if (b > 100) throw new Error("Debes ingresar un valor del 1 al 100 para realizar la operación.")
     b = (b * 0.1)
-    return a * b;
+    let result = (a * b) * 0.1;
+    return result;
 },
 verificar: function(a) {
+    if (!a) throw new Error("Ingresa carácteres numéricos para realizar la operación.");
     if (typeof a === 'number') {
       return a - a === 0;
     }
@@ -54,5 +56,10 @@ verificar: function(a) {
       return Number.isFinite ? Number.isFinite(+a) : isFinite(+a);
     }
     return false;
+},
+round: function(a) {
+    if (!a) throw new Error("Ingresa carácteres numéricos para realizar la operación.");
+    if (isNaN(a)) throw new Error("Debes ingresar carácteres numéricos.");
+    return Math.round(a);
 },
 };
