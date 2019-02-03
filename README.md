@@ -72,7 +72,7 @@ app.verificar('-1.1');            // true
 app.verificar(parseInt('08'));    // true
 app.verificar(parseFloat('08'));  // true
 //Esto puedes usarlo de la siguiente manera
-if (app.verificar(1) === true) {
+if (app.verificar(1)) {
     console.log("Eso si es un número");
 } else {
     console.log("Eso no es un número");
